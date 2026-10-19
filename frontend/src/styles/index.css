@@ -1,0 +1,228 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * ── Theme Variables ──────────────────────────────────────────────────────────
+ * All brand surface colors and text colors are driven by CSS custom properties.
+ * The "light" palette is the default (no class needed on <html>).
+ * The "dark" palette activates when <html> has class="dark".
+ *
+ * Components use Tailwind tokens like bg-brand-card, text-white, text-gray-400
+ * which are mapped to these variables in tailwind.config.js + overrides below.
+ */
+
+@layer base {
+  /* ── Light theme (default) ── */
+  :root {
+    --color-brand-dark:   #f5f5f5;
+    --color-brand-darker: #ffffff;
+    --color-brand-card:   #ffffff;
+    --color-brand-border: #e5e7eb;
+    --color-brand-muted:  #d1d5db;
+
+    --color-text-primary:   #111827;
+    --color-text-secondary: #374151;
+    --color-text-muted:     #6b7280;
+    --color-text-faint:     #9ca3af;
+
+    color-scheme: light;
+  }
+
+  /* ── Dark theme ── */
+  :root.dark {
+    --color-brand-dark:   #1a1a1a;
+    --color-brand-darker: #0f0f0f;
+    --color-brand-card:   #1e1e1e;
+    --color-brand-border: #2e2e2e;
+    --color-brand-muted:  #3a3a3a;
+
+    --color-text-primary:   #ffffff;
+    --color-text-secondary: #d1d5db;
+    --color-text-muted:     #9ca3af;
+    --color-text-faint:     #6b7280;
+
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+
+  /* Accessible focus indicators for keyboard navigation */
+  :focus-visible {
+    outline: 2px solid #e30613;
+    outline-offset: 2px;
+  }
+
+  body {
+    @apply bg-brand-darker font-sans antialiased;
+    color: var(--color-text-primary);
+    min-height: 100vh;
+  }
+
+  /* Scrollbar — adapts to theme */
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: var(--color-brand-dark); }
+  ::-webkit-scrollbar-thumb { background: var(--color-brand-muted); border-radius: 9999px; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-primary-500; }
+}
+
+@layer components {
+  /* ── Buttons ── */
+  .btn-primary {
+    @apply bg-primary-500 hover:bg-primary-600 active:bg-primary-700
+           text-white font-bold px-4 py-2 rounded-xl transition-all duration-200
+           disabled:opacity-50 disabled:cursor-not-allowed
+           shadow-sm hover:shadow-glow-red;
+  }
+  .btn-gold {
+    @apply bg-gold-500 hover:bg-gold-600 active:bg-gold-700
+           text-black font-bold px-4 py-2 rounded-xl transition-all duration-200
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply bg-brand-card hover:bg-brand-muted font-semibold
+           px-4 py-2 rounded-xl border border-brand-border transition-all duration-200;
+    color: var(--color-text-primary);
+  }
+  .btn-danger {
+    @apply bg-red-700 hover:bg-red-800 text-white font-bold
+           px-4 py-2 rounded-xl transition-colors duration-200;
+  }
+
+  /* ── Inputs ── */
+  .input-field {
+    @apply bg-brand-card border border-brand-border
+           rounded-xl px-3 py-2.5 w-full
+           focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500
+           transition-colors duration-200;
+    color: var(--color-text-primary);
+  }
+  .input-field::placeholder {
+    color: var(--color-text-faint);
+  }
+  /* Fix <select> option text in light mode (browser renders options with their own bg) */
+  .input-field option {
+    background: var(--color-brand-card);
+    color: var(--color-text-primary);
+  }
+
+  /* ── Cards ── */
+  .card {
+    @apply bg-brand-card border border-brand-border rounded-2xl overflow-hidden;
+  }
+  .card-hover {
+    @apply card hover:border-primary-500/40 transition-all duration-200
+           hover:shadow-lg hover:shadow-primary-500/10;
+  }
+
+  /* ── Badge ── */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold;
+  }
+
+  /* ── Section heading ── */
+  .section-title {
+    @apply text-2xl sm:text-3xl font-black tracking-tight;
+    color: var(--color-text-primary);
+  }
+}
+
+@layer utilities {
+  .text-brand-gradient {
+    @apply bg-gradient-to-r from-primary-400 to-gold-500 bg-clip-text text-transparent;
+  }
+  .bg-brand-gradient {
+    background: linear-gradient(135deg, #e30613 0%, #fbb900 100%);
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+
+  /* ── Theme-adaptive text helpers ──
+   * These replace hard-coded text-white / text-gray-* usage in components.
+   * Components that already use these Tailwind classes continue to work;
+   * the overrides below make them theme-aware.
+   */
+}
+
+/*
+ * ── Global text-color overrides for theme adaptability ──
+ * Instead of editing every single component file to replace text-white with
+ * text-surface-primary, we override what text-white/text-gray-* produce in
+ * light mode at the CSS level. In dark mode these classes behave normally.
+ *
+ * This is the highest-leverage approach: ~0 component files change but
+ * all hard-coded text colors flip automatically.
+ */
+
+/* In light mode, elements with .text-white should render as near-black, EXCEPT on primary/danger buttons and badges */
+:root:not(.dark) .text-white:not(.btn-primary, .btn-primary *, .btn-danger, .btn-danger *, .badge, .badge *, [class*="bg-primary-"], [class*="bg-primary-"] *, [class*="bg-red-"], [class*="bg-red-"] *, .force-white) {
+  color: var(--color-text-primary) !important;
+}
+
+/* Same for hover:text-white */
+:root:not(.dark) .hover\:text-white:hover:not(.btn-primary, .btn-primary *, .btn-danger, .btn-danger *, .badge, .badge *, [class*="bg-primary-"], [class*="bg-primary-"] *, [class*="bg-red-"], [class*="bg-red-"] *, [class*="hover:bg-primary-"]:hover, [class*="hover:bg-primary-"]:hover *, .force-white) {
+  color: var(--color-text-primary) !important;
+}
+
+/* Gray text scale remapping for light mode readability */
+:root:not(.dark) .text-gray-300 {
+  color: #374151 !important; /* gray-700 equivalent for light */
+}
+:root:not(.dark) .text-gray-400 {
+  color: #4b5563 !important; /* gray-600 equivalent for light */
+}
+:root:not(.dark) .text-gray-500 {
+  color: #6b7280 !important; /* stays gray-500 — works in both */
+}
+:root:not(.dark) .text-gray-600 {
+  color: #9ca3af !important; /* gray-400 equivalent — subtle in light */
+}
+
+/* Placeholder text in light mode */
+:root:not(.dark) .placeholder-gray-600::placeholder {
+  color: #9ca3af !important;
+}
+
+/* ── Custom Scrollbar ── */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--color-brand-border);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-muted);
+}
+
+/* ── Leaflet Dark Mode Overrides ── */
+.dark .leaflet-container {
+  background: #1a1a1a;
+}
+.dark .leaflet-layer,
+.dark .leaflet-control-zoom-in,
+.dark .leaflet-control-zoom-out,
+.dark .leaflet-control-attribution {
+  filter: invert(1) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+.dark .leaflet-popup-content-wrapper,
+.dark .leaflet-popup-tip {
+  background: var(--color-brand-card);
+  color: var(--color-text-primary);
+}
+.dark .wow-popup .leaflet-popup-content strong {
+  color: var(--color-text-primary);
+}
+.dark .wow-popup .leaflet-popup-content span {
+  color: var(--color-text-secondary);
+}
+/* Light-mode shadow adjustments for cards */
+:root:not(.dark) .shadow-2xl {
+  --tw-shadow: 0 10px 40px -10px rgba(0,0,0,0.1);
+}

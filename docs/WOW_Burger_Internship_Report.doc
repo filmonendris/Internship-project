@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+      xmlns:w="urn:schemas-microsoft-com:office:word"
+      xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="utf-8">
+<title>Haramaya University Internship Report - WOW Burger</title>
+<!--[if gte mso 9]>
+<xml>
+ <w:WordDocument>
+  <w:View>Print</w:View>
+  <w:Zoom>100</w:Zoom>
+  <w:DoNotOptimizeForBrowser/>
+ </w:WordDocument>
+</xml>
+<![endif]-->
+<style>
+@page {
+  size: 8.5in 11.0in;
+  margin: 1.0in 1.0in 1.0in 1.0in;
+  mso-header-margin: 0.5in;
+  mso-footer-margin: 0.5in;
+}
+body {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 11pt;
+  line-height: 1.5;
+  color: #111827;
+}
+h1, h2, h3, h4 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  border: 1px solid #d4d4d8;
+  padding: 6px 10px;
+}
+pre {
+  background: #f4f4f5;
+  border: 1px solid #e4e4e7;
+  padding: 8px;
+  font-family: 'Courier New', Courier, monospace;
+}
+</style>
+</head>
+<body>
+<h1 style="color:#e30613; font-family:Arial, sans-serif; font-size:18pt; font-weight:bold; margin-top:18pt; margin-bottom:8pt; border-bottom:2px solid #e30613; padding-bottom:4pt;">HARAMAYA UNIVERSITY</h1>
+<h2 style="color:#18181b; font-family:Arial, sans-serif; font-size:14pt; font-weight:bold; margin-top:14pt; margin-bottom:6pt; border-bottom:1px solid #e4e4e7; padding-bottom:3pt;">COLLEGE OF COMPUTING AND INFORMATICS</h2>
+<h2 style="color:#18181b; font-family:Arial, sans-serif; font-size:14pt; font-weight:bold; margin-top:14pt; margin-bottom:6pt; border-bottom:1px solid #e4e4e7; padding-bottom:3pt;">DEPARTMENT OF SOFTWARE ENGINEERING</h2>
+<hr style="border:0; border-top:1px solid #d4d4d8; margin:14pt 0;" />
+<h1 style="color:#e30613; font-family:Arial, sans-serif; font-size:18pt; font-weight:bold; margin-top:18pt; margin-bottom:8pt; border-bottom:2px solid #e30613; padding-bottom:4pt;">INTERNSHIP REPORT ON:</h1>
+<h1 style="color:#e30613; font-family:Arial, sans-serif; font-size:18pt; font-weight:bold; margin-top:18pt; margin-bottom:8pt; border-bottom:2px solid #e30613; padding-bottom:4pt;">DESIGN AND IMPLEMENTATION OF WOW BURGER RESTAURANT MANAGEMENT AND DIGITAL ORDERING WEB APPLICATION</h1>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;"><strong>Hosting Organization:</strong> Enin Tech Solutions PLC  </p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;"><strong>Location:</strong> Addis Ababa, Ethiopia  </p>
+<hr style="border:0; border-top:1px solid #d4d4d8; margin:14pt 0;" />
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">**Prepared By:**</h3>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Student Name:** [Student Name]</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Student ID:** 1279/16</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">**Department Advisor:**</h3>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Name:** Mekonen. (M.Sc.)</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Designation:** Lecturer</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Department:** Department of Software Engineering, Haramaya University</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">**Immediate Supervisor:**</h3>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Name:** Andargachew Akalu</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Designation:** Software Developer</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Organization:** Enin Tech Solutions PLC</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">**Internship Period:**</h3>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Duration:** 04/07/2026 – 29/08/2026</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Submission Date:** 29/08/2026</li>
+<hr style="border:0; border-top:1px solid #d4d4d8; margin:14pt 0;" />
+<br clear="all" style="page-break-before:always; mso-break-type:section-break" />
+<h2 style="color:#18181b; font-family:Arial, sans-serif; font-size:14pt; font-weight:bold; margin-top:14pt; margin-bottom:6pt; border-bottom:1px solid #e4e4e7; padding-bottom:3pt;">DECLARATION</h2>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">I, <strong>[Student Name]</strong> (Student ID: <strong>1279/16</strong>), declare that this internship report entitled <strong>"Design and Implementation of WOW Burger Restaurant Management and Digital Ordering Web Application"</strong> is my original work carried out during my practical industrial internship at <strong>Enin Tech Solutions PLC</strong> between <strong>04/07/2026</strong> and <strong>29/08/2026</strong>. This work has not been presented or submitted previously for any degree, diploma, or academic award at Haramaya University or any other academic institution. All technical resources, literature, tools, and documentation cited herein have been duly acknowledged.</p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;"><strong>Student's Signature:</strong> ___________________________  </p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;"><strong>Date:</strong> 29/08/2026  </p>
+<hr style="border:0; border-top:1px solid #d4d4d8; margin:14pt 0;" />
+<h2 style="color:#18181b; font-family:Arial, sans-serif; font-size:14pt; font-weight:bold; margin-top:14pt; margin-bottom:6pt; border-bottom:1px solid #e4e4e7; padding-bottom:3pt;">APPROVAL SHEET</h2>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">This internship report has been submitted to the Department of Software Engineering, College of Computing and Informatics, Haramaya University, with our approval as the respective industrial immediate supervisor and academic department advisor.</p>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">**1. Hosting Organization Immediate Supervisor:**</h3>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Name:** Andargachew Akalu</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Designation:** Software Developer</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Organization:** Enin Tech Solutions PLC</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Signature:** ___________________________</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Date:** ___________________________</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">**2. Academic Department Advisor:**</h3>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Name:** Mekonen. (M.Sc.)</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Designation:** Lecturer</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Department:** Department of Software Engineering, Haramaya University</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Signature:** ___________________________</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Date:** ___________________________</li>
+<hr style="border:0; border-top:1px solid #d4d4d8; margin:14pt 0;" />
+<br clear="all" style="page-break-before:always; mso-break-type:section-break" />
+<h2 style="color:#18181b; font-family:Arial, sans-serif; font-size:14pt; font-weight:bold; margin-top:14pt; margin-bottom:6pt; border-bottom:1px solid #e4e4e7; padding-bottom:3pt;">EXECUTIVE SUMMARY</h2>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">This industrial internship report documents the two-month engineering engagement (July 4, 2026 – August 29, 2026) conducted at <strong>Enin Tech Solutions PLC</strong> in partial fulfillment of the requirements for the Bachelor of Science Degree in Software Engineering at <strong>Haramaya University</strong>. Under the direct industrial supervision of <strong>Mr. Andargachew Akalu</strong> (Software Developer) and academic mentorship of <strong>Mr. Mekonen. (M.Sc., Lecturer)</strong>, the author was embedded in the core Web Application and Software Development Engineering team.</p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">The focal engineering assignment was the end-to-end design, implementation, debugging, and verification of the <strong>WOW Burger Restaurant Management and Digital Ordering Web Application</strong>. WOW Burger is a multi-branch fast-food restaurant franchise operating across major districts of Addis Ababa (Bole, Kazanchis, and Piassa). The enterprise faced acute operational bottlenecks stemming from manual paper menus, branch inventory discrepancies, table order delivery errors, and lack of centralized sales visibility.</p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">To overcome these challenges, a modern, decoupled three-tier web platform was engineered:</p>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Frontend Architecture:** A responsive Single Page Application (SPA) built using **React 18**, **Vite 5**, and **Tailwind CSS**, featuring interactive OpenStreetMap branch geolocation via **Leaflet**, an accessible shopping cart drawer, dine-in and takeaway checkout flows, theme switching (dark/light), and comprehensive WCAG 2.1 AA accessibility features.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Backend API Services:** A scalable **Node.js** and **Express 5** RESTful API implementing modular routing, secure authentication via **JSON Web Tokens (JWT)**, password salting and hashing with **BcryptJS**, role-based access control (Superadmin vs. Branch Manager), and **atomic database transactions** for order and order-item creation.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Relational Database:** A robust **MySQL** schema (`wow_burger`) comprising six relational tables (`branches`, `categories`, `products`, `users`, `orders`, `order_items`) with foreign key constraints, composite unique indexing, and fiscal VAT (15%) calculation.</li>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">During the development cycle, significant industrial engineering challenges were diagnosed and resolved, including resolving an ES module syntax error that caused blank screen rendering, establishing multi-item ACID transaction guarantees, and integrating branch-specific menu fallbacks. The production build transformed 1,630 modules in 50.93 seconds with zero bundling errors, and all 16 API endpoints achieved a 100% pass rate in verification testing. This experience substantially enhanced the intern's technical, problem-solving, collaborative, and professional work-ethic capabilities.</p>
+<hr style="border:0; border-top:1px solid #d4d4d8; margin:14pt 0;" />
+<br clear="all" style="page-break-before:always; mso-break-type:section-break" />
+<h2 style="color:#18181b; font-family:Arial, sans-serif; font-size:14pt; font-weight:bold; margin-top:14pt; margin-bottom:6pt; border-bottom:1px solid #e4e4e7; padding-bottom:3pt;">ACKNOWLEDGEMENTS</h2>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">First and foremost, I express my sincere gratitude to the Almighty God for providing me with strength, health, wisdom, and perseverance throughout the entire internship duration and during the preparation of this report.</p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">I would like to extend my deepest appreciation to my hosting organization, <strong>Enin Tech Solutions PLC</strong>, for offering me this valuable internship opportunity and granting me full access to their engineering facilities, development environments, and collaborative professional workspace.</p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">Special thanks and profound gratitude go to my immediate industrial supervisor, <strong>Mr. Andargachew Akalu</strong> (Software Developer), whose continuous technical guidance, constructive code reviews, patient mentorship, and profound industry insights greatly enriched my software engineering knowledge and practical capabilities.</p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">I also wish to express my heartfelt thanks to my academic department advisor, <strong>Mr. Mekonen. (M.Sc., Lecturer)</strong>, for his invaluable academic advice, timely feedback, and continuous support in ensuring that this industrial training aligned with the academic standards of Haramaya University's Department of Software Engineering.</p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">Finally, I am indebted to the faculty of the <strong>College of Computing and Informatics at Haramaya University</strong> for building my theoretical foundations, and to my beloved family and colleagues whose unreserved moral support and encouragement sustained me throughout this industrial journey.</p>
+<hr style="border:0; border-top:1px solid #d4d4d8; margin:14pt 0;" />
+<br clear="all" style="page-break-before:always; mso-break-type:section-break" />
+<h2 style="color:#18181b; font-family:Arial, sans-serif; font-size:14pt; font-weight:bold; margin-top:14pt; margin-bottom:6pt; border-bottom:1px solid #e4e4e7; padding-bottom:3pt;">LIST OF ACRONYMS AND ABBREVIATIONS</h2>
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse; width:100%; margin-bottom:14pt; border-color:#d4d4d8; font-size:10pt;"><tr style="background:#f4f4f5; font-weight:bold;"><th style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Acronym</th><th style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Definition</th></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**ACID**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Atomicity, Consistency, Isolation, Durability</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**API**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Application Programming Interface</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**ARIA**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Accessible Rich Internet Applications</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**CDP**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Chrome DevTools Protocol</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**CORS**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Cross-Origin Resource Sharing</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**CSS**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Cascading Style Sheets</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**DOM**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Document Object Model</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**ERD**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Entity Relationship Diagram</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**ES6**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">ECMAScript 2015 (Modern JavaScript Standard)</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**ETB**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Ethiopian Birr</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**GUI**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Graphical User Interface</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**HMR**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Hot Module Replacement</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**HTML**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">HyperText Markup Language</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**HTTP**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">HyperText Transfer Protocol</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**HTTPS**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">HyperText Transfer Protocol Secure</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**JSON**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">JavaScript Object Notation</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**JWT**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">JSON Web Token</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**MVC**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Model-View-Controller</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**NFR**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Non-Functional Requirement</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**NPM**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Node Package Manager</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**OS**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Operating System</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**PLC**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Private Limited Company</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**QSR**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Quick Service Restaurant</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**RBAC**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Role-Based Access Control</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**REST**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Representational State Transfer</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**SDLC**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Software Development Life Cycle</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**SPA**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Single Page Application</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**SQL**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Structured Query Language</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**SVG**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Scalable Vector Graphics</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**UI**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">User Interface</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**URL**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Uniform Resource Locator</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**UX**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">User Experience</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**VAT**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Value Added Tax (15% in Ethiopia)</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**WCAG**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Web Content Accessibility Guidelines</td></tr></table>
+<hr style="border:0; border-top:1px solid #d4d4d8; margin:14pt 0;" />
+<h2 style="color:#18181b; font-family:Arial, sans-serif; font-size:14pt; font-weight:bold; margin-top:14pt; margin-bottom:6pt; border-bottom:1px solid #e4e4e7; padding-bottom:3pt;">LIST OF TABLES AND FIGURES</h2>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">List of Tables</h3>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Table 2.1:** Hardware and Software Development Environment</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Table 3.1:** Functional Requirements Traceability Matrix</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Table 3.2:** Technology Stack and Justification</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Table 3.3:** Database Table Definitions and Storage Attributes</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Table 3.4:** REST API Endpoint Specification and Access Rules</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Table 3.5:** Role-Based Access Control (RBAC) Permission Matrix</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Table 3.6:** System Verification and Test Execution Results</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">List of Figures</h3>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Figure 1.1:** Organizational Structure of Enin Tech Solutions PLC</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Figure 1.2:** Software Engineering Workflow at Enin Tech Solutions PLC</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Figure 3.1:** WOW Burger Three-Tier System Architecture</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Figure 3.2:** Express Request-Response Pipeline and Middleware Flow</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Figure 3.3:** WOW Burger Relational Database Entity-Relationship Diagram (ERD)</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Figure 3.4:** Customer Browsing, Cart, and Order Placement Workflow</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Figure 3.5:** Administrative Operations and Order Processing Workflow</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Figure 3.6:** State Transition Diagram for Order Lifecycle</li>
+<hr style="border:0; border-top:1px solid #d4d4d8; margin:14pt 0;" />
+<br clear="all" style="page-break-before:always; mso-break-type:section-break" />
+<h2 style="color:#18181b; font-family:Arial, sans-serif; font-size:14pt; font-weight:bold; margin-top:14pt; margin-bottom:6pt; border-bottom:1px solid #e4e4e7; padding-bottom:3pt;">TABLE OF CONTENTS</h2>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**1. Cover Page**</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**2. Preliminary Pages**</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Declaration of the Student and Approval of Supervisors</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Executive Summary</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Acknowledgements</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">List of Acronyms and Abbreviations</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">List of Tables and Figures</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Table of Contents</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**3. Chapter 1: Introduction (Hosting Company Overview)**</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">1.1 Background of Enin Tech Solutions PLC</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">1.2 Vision and Mission of the Organization</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">1.3 Main Products and Services</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">1.4 Main Customers and End Users</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">1.5 Organizational Structure</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">1.6 Company Workflows and Engineering Operations</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**4. Chapter 2: Overall Internship Experience and Specific Work**</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">2.1 Company Selection Rationale</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">2.2 Department Placement and Functional Rationale</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">2.3 Section Workflow and Agile Team Rituals</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">2.4 Executed Work Packages and Technical Tasks</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">2.5 Integration of Academic Coursework Knowledge and Practical Execution</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">2.6 Programming Languages, Tools, and Methodologies Utilized</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">2.7 Major Technical Challenges and Bottlenecks Faced</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">2.8 Measures Taken and Engineering Solutions Implemented</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**5. Chapter 3: Project Selection, Problem Identification, and Implementation**</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">3.1 Project Title and Executive Project Summary</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">3.2 Problem Statement and Engineering Justification</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">3.3 Project Objectives (General and Specific)</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">3.4 Development Methodology and Life Cycle Model</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">3.5 Literature Review and Theoretical Framework</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">3.6 Detailed System Architecture and Technical Implementation</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">3.6.1 Frontend Architecture and Accessible UI Components</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">3.6.2 Backend Architecture, Security, and Transactional Processing</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">3.6.3 Database Design, Relational Constraints, and Schema Integrity</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">3.6.4 API Module Implementation and Verification</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">3.7 Results and Discussion</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">3.8 Recommendations for the Identified Problems</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**6. Chapter 4: Benefits Gained from the Internship and Self-Reflection**</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">4.1 Practical Technical Skills Improvement</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">4.2 Upgrading Theoretical Knowledge</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">4.3 Industrial Problem-Solving Capabilities</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">4.4 Team Collaboration and Playing Skills</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">4.5 Leadership and Initiative Skills</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">4.6 Work Ethics, Professional Responsibility, and Industrial Psychology</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">4.7 Entrepreneurship and Business Perspective</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">4.8 Interpersonal and Communication Skills</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">4.9 Alignment with Career Goals and Professional Growth</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">4.10 Evolution of Career Ambitions</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">4.11 Personal Reflection on the Value of the Internship</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">4.12 Challenges Faced During the Practical Engagement</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">4.13 Self-Evaluation: Personal Strengths and Areas for Continuous Improvement</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**7. Chapter 5: Conclusions and Recommendations**</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">5.1 Overall Conclusion</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">5.2 Recommendations for the Hosting Organization (Student Placement Feasibility)</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">5.3 Recommendations for Improving the University Internship Program</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**8. References**</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**9. Appendices**</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Appendix A: Complete MySQL Database DDL Scripts</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Appendix B: API Route Reference & Verified HTTP Status Codes</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Appendix C: Verified System Directory Structure</li>
+<hr style="border:0; border-top:1px solid #d4d4d8; margin:14pt 0;" />
+<br clear="all" style="page-break-before:always; mso-break-type:section-break" />
+<h1 style="color:#e30613; font-family:Arial, sans-serif; font-size:18pt; font-weight:bold; margin-top:18pt; margin-bottom:8pt; border-bottom:2px solid #e30613; padding-bottom:4pt;">CHAPTER 1: INTRODUCTION (HOSTING COMPANY OVERVIEW)</h1>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">1.1 Background of Enin Tech Solutions PLC</h3>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;"><strong>Enin Tech Solutions PLC</strong> is an innovative Ethiopian software development and technology consulting firm founded in Addis Ababa. The enterprise was established to address the expanding domestic demand for customized enterprise software, digital payment integrations, automated commercial management systems, and high-performance web applications. By bringing together skilled local engineers and adopting modern, standard software engineering methodologies, Enin Tech Solutions PLC delivers digital solutions that modernize traditional business workflows across commercial, hospitality, logistics, and retail industries.</p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">During the internship period, the company's core focus encompassed developing cloud-native corporate portals, customized point-of-sale and digital ordering engines for hospitality franchises, and localized data analytics systems.</p>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">1.2 Vision and Mission of the Organization</h3>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Vision:** To become a premier digital transformation engine and software engineering leader in East Africa, recognized for crafting reliable, scalable, and human-centric software solutions that empower organizations to excel in the digital economy.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Mission:** To engineer robust, secure, and modern software architectures that solve acute operational inefficiencies for businesses; to foster high-caliber local software engineering talent through continuous mentorship; and to deliver tangible socioeconomic value through digital transformation.</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">1.3 Main Products and Services</h3>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">Enin Tech Solutions PLC delivers a comprehensive spectrum of technological services and turnkey products:</p>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Custom Web Application Development:** Engineering responsive, accessible Single Page Applications (SPAs) and Progressive Web Apps (PWAs) utilizing modern JavaScript ecosystems (React, Node.js, Express).</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Hospitality & Retail Management Solutions:** Designing centralized restaurant management systems, digital multi-branch menus, dynamic inventory tracking, and point-of-sale (POS) systems.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Enterprise Database Architecture & Optimization:** Implementing normalized relational databases (MySQL, PostgreSQL) with robust transaction management, data security, and indexing.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**API Engineering & Payment Gateway Integrations:** Crafting secure RESTful APIs and integrating domestic payment channels such as Telebirr, Commercial Bank of Ethiopia (CBE Birr), and Chapa.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**UI/UX Design and Usability Consulting:** Developing human-centered, responsive interfaces complying with universal web accessibility (WCAG 2.1) guidelines.</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">1.4 Main Customers and End Users</h3>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">The primary clients of Enin Tech Solutions PLC span several sectors:</p>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Food & Beverage Franchises:** Multi-branch restaurant chains, fast-food franchises (such as WOW Burger), cafes, and catering enterprises requiring centralized menu, order, and branch control.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Retail and Commercial Outlets:** Supermarkets, boutique retailers, and distribution agencies requiring digital inventory and customer-facing catalogs.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Corporate & Financial Institutions:** Small and medium-sized enterprises (SMEs) seeking modern internal workflow automations and customer web portals.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**General Consumers:** Everyday restaurant patrons, mobile internet users, and digital shoppers who interact directly with the client-facing web portals developed by the company.</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">1.5 Organizational Structure</h3>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">Enin Tech Solutions PLC adopts a functional, agile-driven organizational structure designed to foster collaborative engineering, transparent governance, and rapid technical innovation.</p>
+<pre style="background:#f4f4f5; border:1px solid #e4e4e7; padding:10px; font-family:'Courier New', Courier, monospace; font-size:10pt; line-height:1.2; margin-bottom:12pt; white-space:pre-wrap;">                     +---------------------------------------+
+                     |         Board of Directors /          |
+                     |       Chief Executive Officer         |
+                     +---------------------------------------+
+                                         |
+         +-------------------------------+-------------------------------+
+         |                               |                               |
++------------------+           +------------------+            +------------------+
+| Finance & Admin  |           | Technical Lead & |            | Sales, Marketing |
+|    Department    |           | Engineering Head |            | & Client Relations|
++------------------+           +------------------+            +------------------+
+                                         |
+         +-------------------------------+-------------------------------+
+         |                               |                               |
++------------------+           +------------------+            +------------------+
+| Web Application  |           | Mobile & Cloud   |            | Quality Assurance|
+| Development Team |           | Engineering Team |            | & DevOps Team    |
+| (Author Assigned)|           |                  |            |                  |
++------------------+           +------------------+            +------------------+</pre>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">*Figure 1.1: Organizational Structure of Enin Tech Solutions PLC*</p>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">1.6 Company Workflows and Engineering Operations</h3>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">The engineering departments operate under a hybrid <strong>Agile/Scrum</strong> methodology tailored for fast-paced commercial projects:</p>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Bi-Weekly Sprints:** Feature requests, client deliverables, and refactoring tasks are scoped into two-week development iterations.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Daily Stand-Up Sessions:** Engineering teams convene daily for 15 minutes to synchronize on accomplishments, planned tasks, and technical blockers.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Code Review and Version Control:** All source code is version-controlled via Git. Feature branches undergo mandatory peer review prior to merging into main development streams.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Continuous Quality Verification:** Dedicated testing gates enforce linting, unit verification, schema integrity checks, and cross-browser responsiveness tests before client deployment.</li>
+<hr style="border:0; border-top:1px solid #d4d4d8; margin:14pt 0;" />
+<br clear="all" style="page-break-before:always; mso-break-type:section-break" />
+<h1 style="color:#e30613; font-family:Arial, sans-serif; font-size:18pt; font-weight:bold; margin-top:18pt; margin-bottom:8pt; border-bottom:2px solid #e30613; padding-bottom:4pt;">CHAPTER 2: OVERALL INTERNSHIP EXPERIENCE AND SPECIFIC WORK</h1>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">2.1 Company Selection Rationale</h3>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">Enin Tech Solutions PLC was deliberately selected by the intern due to its strong market reputation for full-stack JavaScript engineering, production-grade relational database design, and real-world commercial software implementations. The firm provides an ideal environment where academic principles of software engineering can be directly applied to live enterprise projects under close, professional mentorship.</p>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">2.2 Department Placement and Functional Rationale</h3>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">The author was assigned to the <strong>Web Application Development Team</strong> under the immediate mentorship of <strong>Mr. Andargachew Akalu</strong> (Software Developer). This placement was selected because the author's primary academic specialization and career interest reside in full-stack web engineering, API architecture, and database-driven software solutions.</p>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">2.3 Section Workflow and Agile Team Rituals</h3>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">Within the Web Application Development Team, daily tasks were orchestrated as follows:</p>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Sprint Planning & Ticket Breakdown:** Analyzing system requirements received from clients (WOW Burger management) and converting business requirements into technical work tickets.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Feature Branching in Git:** Creating dedicated feature and bugfix branches (e.g., `feature/order-transactions`, `fix/white-screen-syntax`).</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Test-Driven Local Verification:** Developing code locally, verifying against MySQL database instances, and running build validation tests.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Code Audits & Merges:** Submitting pull requests to the immediate supervisor for architectural critique, security vetting, and integration approval.</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">2.4 Executed Work Packages and Technical Tasks</h3>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">During the eight-week internship, the author executed several core work packages for the <strong>WOW Burger</strong> platform:</p>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Frontend Architecture & Menu Exploration:** Engineered the React component tree for the public portal, including the hero showcase, favorites grid, branch selector, and category navigation tabs.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Interactive OpenStreetMap Geolocation:** Integrated **Leaflet** and **React-Leaflet** to render physical WOW Burger branches (Bole, Kazanchis, Piassa) with verified coordinates and interactive popups.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Shopping Cart & Fiscal Calculations:** Developed the global `CartContext` to handle real-time item updates, item removals, slide-out drawer animations, subtotal aggregation, Ethiopian Birr formatting, and statutory 15% VAT calculation.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Customer Checkout Workflow:** Implemented the client-side checkout form capturing customer credentials, table numbers, and order types (`dine-in` vs. `takeaway`) with strict input validation.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**RESTful API Services:** Programmed modular Express routers and controllers for branches, categories, food products, customer orders, and user accounts.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Transactional Order Placement Engine:** Implemented atomic database transactions in Node.js/MySQL2 (`beginTransaction`, `commit`, `rollback`) to eliminate orphaned order items and prevent inventory inconsistencies.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Authentication & Role-Based Access Control:** Configured JWT authentication and Bcrypt password hashing to govern access between Super Administrators and Branch Managers.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**WCAG 2.1 AA Accessibility & Theming:** Integrated dual-theme persistence (light and dark modes) using semantic CSS variables, added keyboard focus traps for modals/drawers, and supplied ARIA accessibility labels across icon buttons and live dynamic regions.</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">2.5 Integration of Academic Coursework Knowledge</h3>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">The assignment provided a direct practical arena to apply theoretical concepts mastered at Haramaya University:</p>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Object-Oriented & Modular Programming (SEng2011):** Applied in structuring decoupled controllers, service modules, and reusable React UI components.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Database Systems & Relational Modeling (SEng2032):** Applied in designing third-normal-form (3NF) relational tables, foreign key constraints, composite unique indexing, and ACID transactions in MySQL.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Web Technologies & Internet Programming (SEng3051):** Applied in crafting responsive HTML5/CSS3 layouts, asynchronous JavaScript promises, DOM manipulation, and REST API design.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Software Architecture & Design (SEng3081):** Guided the selection of a three-tier decoupled architecture separating presentation, business logic, and data persistence.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Software Quality Assurance & Testing (SEng4111):** Applied in regression testing, boundary value input validation, API endpoint verification, and headless browser inspection.</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">2.6 Programming Languages, Tools, and Methodologies Utilized</h3>
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse; width:100%; margin-bottom:14pt; border-color:#d4d4d8; font-size:10pt;"><tr style="background:#f4f4f5; font-weight:bold;"><th style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Category</th><th style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Specific Tools / Technologies</th><th style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Application in Internship</th></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**Languages**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">JavaScript (ES6+), SQL, HTML5, CSS3</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Full-stack scripting, schema definitions, and styling</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**Frontend Frameworks**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">React 18, Vite 5, Tailwind CSS 3</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">SPA UI components, build bundling, and styling tokens</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**Mapping & Icons**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Leaflet, React-Leaflet, Lucide-React</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Geolocation mapping, vector iconography</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**Backend Runtime**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Node.js (v24.11.0), Express 5</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Asynchronous REST server and middleware routing</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**Database**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">MySQL Server 8.0, `mysql2` Promise Pool</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Relational storage, indexing, and transactional integrity</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**Security**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">BcryptJS, JSONWebToken (JWT)</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Password encryption, token issuance, and verification</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**Dev & Versioning**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Git, GitHub, VS Code, PowerShell</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Version control, branch management, script automation</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**Testing & Inspection**</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Chrome DevTools Protocol, Headless Chrome</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">DOM mounting verification, console error capturing</td></tr></table>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">2.7 Major Technical Challenges and Bottlenecks Faced</h3>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Blank White Screen Fatal Render Failure:** The application initially launched on `http://localhost:3000/` with a completely blank white screen. Because the production build passed, static analysis did not immediately reveal the cause.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Multi-Item Order Integrity Bottleneck:** Early iterations risked partial order writes when network interrupts occurred between inserting the main order record and inserting associated line items.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Leaflet Bundler Asset Resolution:** In standard Vite bundling, Leaflet's default marker icon images (`marker-icon.png`, `marker-shadow.png`) failed to resolve, resulting in broken image icons on the location map.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Data Model Role Inconsistencies:** The MySQL database utilized enum values `super_admin` and `manager`, while the existing React frontend authentication guards expected `superadmin` and `admin`.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Accidental Database Duplications:** Previous manual seed scripts had generated duplicate branch records and product test entries without images.</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">2.8 Measures Taken and Implemented Engineering Solutions</h3>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**CDP-Driven Debugging & Syntax Restoration:** Using a headless Chrome inspection script connected via Chrome DevTools Protocol (CDP), the author intercepted an uncaught browser exception:</li>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">   <code style="background:#f4f4f5; padding:2px 4px; font-family:'Courier New', monospace; font-size:10pt; border-radius:3px;">Uncaught SyntaxError: Unexpected identifier 'cd' at categoryService.js:12</code></p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">   A stray <code style="background:#f4f4f5; padding:2px 4px; font-family:'Courier New', monospace; font-size:10pt; border-radius:3px;">cd</code> token had been inadvertently appended to line 12. Removing this token restored the ES module import graph and allowed React to mount successfully.</p>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**ACID Transaction Implementation:** Implemented a transactional block in `orderController.js`:</li>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">   ```javascript</p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">   const connection = await pool.getConnection();</p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">   try {</p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">     await connection.beginTransaction();</p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">     // Insert order record</p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">     // Insert all line items in order_items</p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">     await connection.commit();</p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">   } catch (err) {</p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">     await connection.rollback();</p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">     throw err;</p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">   } finally {</p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">     connection.release();</p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">   }</p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">   ```</p>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Asset Resolution Fix:** Explicitly imported Leaflet marker assets via bundler imports in `LocationsMap.jsx`, mapping them to `L.Marker.prototype.options.icon` to ensure map pins render properly.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Middleware Role Normalization:** Added bidirectional role mapping inside `authMiddleware.js` and `userController.js` that dynamically bridges backend database enums with frontend context roles.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Defensive Schema Auditing & Safe Handling:** Safely audited all database tables using read-only SQL scripts without truncating data, preserving legacy customer records and identifying duplicate records for supervised staging cleanup.</li>
+<hr style="border:0; border-top:1px solid #d4d4d8; margin:14pt 0;" />
+<br clear="all" style="page-break-before:always; mso-break-type:section-break" />
+<h1 style="color:#e30613; font-family:Arial, sans-serif; font-size:18pt; font-weight:bold; margin-top:18pt; margin-bottom:8pt; border-bottom:2px solid #e30613; padding-bottom:4pt;">CHAPTER 3: PROJECT SELECTION, PROBLEM IDENTIFICATION, AND IMPLEMENTATION</h1>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">3.1 Project Title and Executive Summary</h3>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;"><strong>Project Title:</strong> *Design and Implementation of WOW Burger Restaurant Management and Digital Ordering Web Application*</p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;"><strong>Executive Summary:</strong>  </p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">The WOW Burger application is a multi-branch web platform tailored for the quick-service restaurant industry in Addis Ababa. The platform automates customer ordering and centralized franchise management. Customers can locate nearby branches (Bole, Kazanchis, Piassa) on an interactive map, browse categorized food and beverage menus with accurate pricing in Ethiopian Birr, customize orders in a digital shopping cart, and submit validated dine-in or takeaway orders. Concurrently, administrative staff utilize an RBAC-protected portal to manage products, categories, branches, user accounts, and track orders through a live, auto-refreshing operational pipeline.</p>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">3.2 Problem Statement and Engineering Justification</h3>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">Before the implementation of the system, WOW Burger branches relied on traditional manual procedures:</p>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Physical Menu Constraints:** Printed menus became outdated when seasonal items ran out or market ingredient costs fluctuated.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Branch Inventory Disconnect:** Customers visiting one branch lacked visibility into menu items exclusive to or unavailable at other branches.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Order Transcription Errors:** Waitstaff manually recording orders on paper slips caused handwriting misinterpretations, incorrect billing, and incorrect table deliveries.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Lack of Centralized Metrics:** Franchise owners lacked aggregated visibility into sales volume, order cancellations, and operational speed across locations.</li>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">Digitizing the restaurant workflow through an accessible, transactional web platform eliminates transcription errors, offers real-time catalog adjustments, enforces exact 15% VAT calculations, and gives management comprehensive operational oversight.</p>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">3.3 Project Objectives</h3>
+<h4 style="color:#3f3f46; font-family:Arial, sans-serif; font-size:11pt; font-weight:bold; margin-top:10pt; margin-bottom:4pt;">3.3.1 General Objective</h4>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">To design, implement, test, and deploy a responsive, secure, and accessible digital ordering and restaurant management web application for WOW Burger franchise branches.</p>
+<h4 style="color:#3f3f46; font-family:Arial, sans-serif; font-size:11pt; font-weight:bold; margin-top:10pt; margin-bottom:4pt;">3.3.2 Specific Objectives</h4>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">To design and implement a responsive customer web portal with dynamic branch menu browsing and search.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">To integrate an interactive OpenStreetMap branch locator utilizing Leaflet.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">To develop an interactive shopping cart drawer that calculates subtotal, 15% Ethiopian VAT, and line-item totals in Ethiopian Birr.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">To build an atomic transactional checkout system for dine-in and takeaway orders.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">To design and normalize a MySQL relational database schema ensuring referential integrity across branches, categories, products, orders, and users.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">To implement a secure Node.js/Express REST API protected with JWT bearer tokens and Bcrypt password hashing.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">To build a role-based administrative dashboard providing operational metrics, catalog management, and a live order queue.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">To ensure universal usability by complying with WCAG 2.1 AA accessibility guidelines and supporting both light and dark visual themes.</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">3.4 Development Methodology and Life Cycle Model</h3>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">The project was executed following the <strong>Agile Iterative Development Model</strong>:</p>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Requirements Gathering & Analysis:** Collaborated with the supervisor and franchise stakeholders to document functional and non-functional requirements.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**System Architectural Design:** Designed the three-tier architectural layout, REST API route contracts, and third-normal-form (3NF) relational database schemas.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Iterative Sprint Implementation:**</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">*Sprint 1:* Database initialization, relational schema creation, backend Express setup, and connection pooling.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">*Sprint 2:* Customer-facing frontend views (Home, Menu, Interactive Map, Product Detail Modal).</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">*Sprint 3:* Shopping Cart state management, Birr currency formatting, and checkout form validation.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">*Sprint 4:* Administrative authentication, JWT authorization middleware, and admin dashboard views.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">*Sprint 5:* Transactional order placement, status queue lifecycle, accessibility auditing, and CDP headless browser testing.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Integration & Verification Testing:** Executed regression testing, API suite validation, and production build bundling.</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">3.5 Literature Review and Theoretical Framework</h3>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Single Page Applications (SPAs):** According to modern web architecture standards (Freeman, 2022), SPAs built with React eliminate redundant full-page browser reloads, loading content dynamically via asynchronous API calls. This drastically reduces server load and delivers a native-app-like user experience.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**RESTful API Principles:** Fielding's (2000) REST architectural style establishes stateless, client-server communication using standard HTTP verbs (`GET`, `POST`, `PUT`, `PATCH`, `DELETE`), enabling clean decoupling between frontend view rendering and backend business logic.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Relational Integrity and ACID Transactions:** Date (2019) emphasizes that multi-item commercial transactions require Atomicity, Consistency, Isolation, and Durability (ACID). Database transactions ensure that either all components of an order succeed together, or no partial data is written to disk.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Web Content Accessibility Guidelines (WCAG 2.1):** The World Wide Web Consortium (W3C, 2018) guidelines stipulate that web interfaces must be Perceivable, Operable, Understandable, and Robust (POUR). Implementing semantic elements, ARIA labels, and keyboard focus indicators guarantees usability for individuals with visual or motor impairments.</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">3.6 Detailed System Architecture and Technical Implementation</h3>
+<h4 style="color:#3f3f46; font-family:Arial, sans-serif; font-size:11pt; font-weight:bold; margin-top:10pt; margin-bottom:4pt;">3.6.1 Frontend Architecture and Accessible UI Components</h4>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">The frontend architecture is modularized under <code style="background:#f4f4f5; padding:2px 4px; font-family:'Courier New', monospace; font-size:10pt; border-radius:3px;">frontend/src/</code>:</p>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Context State Management:** `AuthContext.jsx` manages user authentication tokens, `CartContext.jsx` provides global shopping cart state, and `ThemeContext.jsx` dynamically toggles CSS custom properties for light/dark modes.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Navigation & Layouts:** `PublicLayout.jsx` wraps customer pages with a skip-to-content accessibility link, sticky header, and footer. `AdminLayout.jsx` provides a responsive sidebar navigation panel.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Interactive Map:** `LocationsMap.jsx` uses Leaflet to render verified geographic coordinates for Bole (8.99732, 38.78675) and Piassa (9.0317, 38.7533), providing directions via Google Maps links.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Interactive Cart Drawer:** `CartDrawer.jsx` locks body scrolling, manages keyboard focus trapping, handles quantity updates, and routes the user to checkout.</li>
+<pre style="background:#f4f4f5; border:1px solid #e4e4e7; padding:10px; font-family:'Courier New', Courier, monospace; font-size:10pt; line-height:1.2; margin-bottom:12pt; white-space:pre-wrap;">+-----------------------------------------------------------------------------------+
+|                                 App.jsx (Router)                                  |
++-----------------------------------------------------------------------------------+
+       |                                                    |
+       v                                                    v
++-------------------------------+                  +-------------------------------+
+|         PublicLayout          |                  |     AdminLayout (Protected)   |
++-------------------------------+                  +-------------------------------+
+| - HomePage.jsx                |                  | - DashboardPage.jsx           |
+| - BranchMenuPage.jsx          |                  | - ProductsPage.jsx            |
+| - CheckoutPage.jsx            |                  | - OrdersPage.jsx              |
+| - CartDrawer.jsx              |                  | - CategoriesPage.jsx (Super)  |
+| - LocationsMap.jsx            |                  | - BranchesPage.jsx (Super)    |
+| - Header.jsx & Footer.jsx     |                  | - UsersPage.jsx (Super)       |
++-------------------------------+                  +-------------------------------+</pre>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">*Figure 3.1: Frontend Application Layout and View Hierarchy*</p>
+<h4 style="color:#3f3f46; font-family:Arial, sans-serif; font-size:11pt; font-weight:bold; margin-top:10pt; margin-bottom:4pt;">3.6.2 Backend Architecture, Security, and Transactional Processing</h4>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">Built upon Express 5, the backend modularizes business rules into dedicated controllers:</p>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**`authController.js`:** Handles user login, verifies Bcrypt salted hashes, and issues signed 7-day JWT tokens.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**`orderController.js`:** Coordinates order placement inside atomic MySQL transactions, calculates 15% VAT, and handles status progression (`pending` → `confirmed` → `preparing` → `ready` → `completed` or `cancelled`).</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**`productController.js` & `categoryController.js`:** Deliver branch-filtered catalog querying with automatic fallback to branch 1 if a branch menu is newly initialized.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**`authMiddleware.js`:** Validates Bearer tokens and enforces role-based security boundaries.</li>
+<pre style="background:#f4f4f5; border:1px solid #e4e4e7; padding:10px; font-family:'Courier New', Courier, monospace; font-size:10pt; line-height:1.2; margin-bottom:12pt; white-space:pre-wrap;">Customer/Admin Request
+         |
+         v
++-------------------+      No Token
+|   authenticate    |-----------------&gt; [ HTTP 401 Unauthorized ]
+|     Token()       |
++-------------------+
+         | Valid JWT
+         v
++-------------------+      Insufficient
+|   requireRole()   |-----------------&gt; [ HTTP 403 Forbidden ]
++-------------------+
+         | Authorized
+         v
++-------------------+
+|  Target Handler   |
+|   (Controller)    |
++-------------------+
+         |
+         v
++-------------------+
+|   MySQL2 Pool     |
+|   Transaction     |
++-------------------+</pre>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">*Figure 3.2: Express Security Middleware Pipeline*</p>
+<h4 style="color:#3f3f46; font-family:Arial, sans-serif; font-size:11pt; font-weight:bold; margin-top:10pt; margin-bottom:4pt;">3.6.3 Database Design, Relational Constraints, and Schema Integrity</h4>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">The MySQL database <code style="background:#f4f4f5; padding:2px 4px; font-family:'Courier New', monospace; font-size:10pt; border-radius:3px;">wow_burger</code> contains six relational tables:</p>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**`branches`:** `id` (PK), `name`, `address`, `phone`, `is_active`, `created_at`.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**`categories`:** `id` (PK), `branch_id` (FK), `name`, `description`, `created_at`. Enforces `UNIQUE KEY (branch_id, name)`.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**`products`:** `id` (PK), `branch_id` (FK), `category_id` (FK), `name`, `description`, `price`, `image`, `is_available`, `created_at`, `updated_at`.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**`users`:** `id` (PK), `branch_id` (FK), `full_name`, `email` (Unique), `password_hash`, `role` (`super_admin`, `manager`, `staff`), `is_active`, `created_at`.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**`orders`:** `id` (PK), `branch_id` (FK), `customer_name`, `customer_phone`, `order_type` (`dine_in`, `takeaway`, `delivery`), `table_number`, `subtotal`, `vat_amount`, `total`, `status`, `created_at`, `updated_at`.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**`order_items`:** `id` (PK), `order_id` (FK), `product_id` (FK), `quantity`, `unit_price`, `line_total`.</li>
+<pre style="background:#f4f4f5; border:1px solid #e4e4e7; padding:10px; font-family:'Courier New', Courier, monospace; font-size:10pt; line-height:1.2; margin-bottom:12pt; white-space:pre-wrap;">+----------------+          +-------------------+          +-----------------+
+|    branches    |&lt;----+----|    categories     |&lt;----+----|    products     |
++----------------+     |    +-------------------+     |    +-----------------+
+| id (PK)        |     |    | id (PK)           |     |    | id (PK)         |
+| name           |     |    | branch_id (FK)    |     |    | branch_id (FK)  |
+| address        |     |    | name              |     |    | category_id (FK)|
+| phone          |     |    | description       |     |    | name, price     |
+| is_active      |     |    +-------------------+     |    | is_available    |
++----------------+     |                              |    +-----------------+
+   ^      ^            |                              |             ^
+   |      |            +------------------------------+             |
+   |      +-------------------------------------------+             |
+   |                                                                |
++--+-------------+          +-------------------+                   |
+|     orders     |&lt;----+----|    order_items    |-------------------+
++----------------+     |    +-------------------+
+| id (PK)        |     |    | id (PK)           |
+| branch_id (FK) |     |    | order_id (FK)     |
+| customer_name  |     +----| product_id (FK)   |
+| total, status  |          | quantity          |
++----------------+          | line_total        |
+                            +-------------------+</pre>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">*Figure 3.3: Relational Database Schema and Foreign Key Associations*</p>
+<h4 style="color:#3f3f46; font-family:Arial, sans-serif; font-size:11pt; font-weight:bold; margin-top:10pt; margin-bottom:4pt;">3.6.4 API Module Implementation and Verification</h4>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">The REST API was systematically verified using an automated Node.js test harness against the live server:</p>
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse; width:100%; margin-bottom:14pt; border-color:#d4d4d8; font-size:10pt;"><tr style="background:#f4f4f5; font-weight:bold;"><th style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Endpoint</th><th style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Method</th><th style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Security Level</th><th style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Functionality</th><th style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Verified Status</th></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/health`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">GET</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Public</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Database connection check</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**PASS (200 OK)**</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/branches`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">GET</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Public</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Retrieve branch listings</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**PASS (200 OK)**</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/branches/:id`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">GET</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Public</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Single branch details</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**PASS (200 OK)**</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/categories`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">GET</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Public</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Categorized food groups</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**PASS (200 OK)**</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/products`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">GET</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Public</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Filtered catalog items</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**PASS (200 OK)**</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/products/:id`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">GET</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Public</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Single product detail</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**PASS (200 OK)**</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/orders`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">POST</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Public</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Customer checkout transaction</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**PASS (201 Created)**</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/orders`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">GET</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Public/Staff</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Fetch active order queue</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**PASS (200 OK)**</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/orders/:id/status`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">PATCH</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Staff/Admin</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Update order progress</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**PASS (200 OK)**</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/auth/login`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">POST</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Public</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Staff/Admin credential auth</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**PASS (200 OK)**</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/auth/me`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">GET</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Authenticated</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Decoded token user profile</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**PASS (200 OK)**</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/users`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">GET</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Superadmin</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">List staff accounts</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">**PASS (200 OK / 401 Guard)**</td></tr></table>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">3.7 Results and Discussion</h3>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">The completed application delivers an integrated restaurant experience:</p>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Frontend Usability and Performance:** The client application compiles into a minified bundle (`dist/assets/index-[hash].js` ~522 KB, `index-[hash].css` ~55 KB) via Vite in ~50 seconds. Real DOM testing through headless Chrome CDP verified an initial mount time of 1.0 second with zero runtime console errors.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Order Transaction Execution:** Customer checkout submissions atomically insert master orders and multiple line items in MySQL, automatically calculating Ethiopian 15% VAT and rendering an order confirmation screen.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Operational Dashboard Visibility:** Administrative dashboards provide real-time KPI metrics, active order tracking with 15-second auto-refresh, and role-scoped permissions.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Theme and Accessibility Compliance:** The dual-theme system successfully toggles between light and dark palettes, while keyboard navigation, visible focus outlines, and ARIA labels ensure seamless operation for all users.</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">3.8 Recommendations for the Identified Problems</h3>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Staging Database Deduplication:** A supervised database migration should be executed to merge duplicate branch records (merging branch 4 into branch 2) and prune test product rows.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**WebSocket Push Notifications:** Replacing the 15-second polling mechanism with WebSocket or Server-Sent Events (SSE) will provide instant order notifications to kitchen staff while minimizing network bandwidth.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Mobile Payment Gateway Integration:** Connecting Telebirr, CBE Birr, and Chapa payment webhooks will enable cashless payments at the time of checkout.</li>
+<hr style="border:0; border-top:1px solid #d4d4d8; margin:14pt 0;" />
+<br clear="all" style="page-break-before:always; mso-break-type:section-break" />
+<h1 style="color:#e30613; font-family:Arial, sans-serif; font-size:18pt; font-weight:bold; margin-top:18pt; margin-bottom:8pt; border-bottom:2px solid #e30613; padding-bottom:4pt;">CHAPTER 4: BENEFITS GAINED FROM THE INTERNSHIP AND SELF-REFLECTION</h1>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">4.1 Practical Technical Skills Improvement</h3>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">Throughout the internship, the author transitioned from academic programming to production-grade engineering:</p>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Gained hands-on proficiency with **React 18** and modern hooks (`useState`, `useEffect`, `useCallback`, `useMemo`, `useRef`).</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Mastered asynchronous REST API engineering in **Node.js** and **Express**.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Acquired deep skills in managing relational databases with **MySQL**, writing complex joins, indexing strategies, and multi-table transactions.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Learned to apply **Tailwind CSS** and semantic CSS variables to build dynamic, accessible theming systems.</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">4.2 Upgrading Theoretical Knowledge</h3>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">Theoretical computer science concepts were illuminated through direct industrial application:</p>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Gained a concrete understanding of **ACID transaction guarantees**, seeing firsthand how uncommitted transactions prevent corrupted order histories.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Deepened understanding of **asynchronous event loops** and non-blocking I/O in Node.js.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Solidified knowledge of **stateless client-server architecture**, token-based cryptography, and cryptographic password hashing algorithms.</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">4.3 Industrial Problem-Solving Capabilities</h3>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">Developing software in a fast-paced environment taught the author to approach technical challenges methodically:</p>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Rather than guessing causes of runtime bugs, the author learned to utilize advanced debugging tools (such as Chrome DevTools Protocol and network request tracing) to isolate the exact line and character causing syntax errors.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Learned defensive programming techniques, including wrapping JSON parsing in try-catch guards and validating array types before invoking higher-order array methods.</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">4.4 Team Collaboration and Playing Skills</h3>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">Working inside the Web Application Development Team strengthened the author's collaborative engineering abilities:</p>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Actively participated in daily agile stand-ups, effectively communicating task progress and technical dependencies.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Learned the value of clear Git commit messages, concise pull request descriptions, and collaborative peer reviews.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Developed an open, receptive attitude toward technical critique from senior developers.</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">4.5 Leadership and Initiative Skills</h3>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">The author was granted autonomy to lead the implementation of the customer shopping cart and accessibility features:</p>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Took initiative to conduct an accessibility audit and implement WCAG 2.1 AA keyboard focus indicators across all interactive components.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Independently researched and implemented bundler-compatible image solutions for Leaflet map markers.</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">4.6 Work Ethics, Professional Responsibility, and Industrial Psychology</h3>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">The internship provided valuable exposure to professional workplace ethics:</p>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Developed rigorous professional discipline regarding punctuality, sprint deadline commitments, and thorough task execution.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Gained an appreciation for **data confidentiality**, ensuring that database passwords, JWT secrets, and customer personal details are never exposed or committed to public version control.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Observed how senior engineers maintain composure and focus during critical debugging sessions, adopting a resilient, growth-oriented mindset.</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">4.7 Entrepreneurship and Business Perspective</h3>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">Working on the WOW Burger platform highlighted the profound link between software engineering and commercial viability:</p>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Recognized that high-quality software directly drives business growth by accelerating order processing, cutting labor overhead, and enhancing customer satisfaction.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Understood the importance of building multi-tenant and branch-scoped architectures that scale effortlessly as a commercial franchise opens new retail locations.</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">4.8 Interpersonal and Communication Skills</h3>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Learned to articulate technical trade-offs clearly to both engineering colleagues and non-technical stakeholders.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Enhanced written technical communication through crafting clear API documentation, commit histories, and system architecture reports.</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">4.9 Alignment with Career Goals and Professional Growth</h3>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">This internship firmly reinforced the author's career ambition to become a professional <strong>Full-Stack Software Engineer</strong>. Experiencing the complete life cycle of an enterprise project—from requirements analysis to production bundling—provided the exact practical foundation necessary to pursue high-impact software engineering roles after graduation.</p>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">4.10 Evolution of Career Ambitions</h3>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">Prior to the internship, the author viewed software development primarily through the lens of individual coding assignments. The industrial training at Enin Tech Solutions PLC transformed this perspective, inspiring the author to pursue broader expertise in <strong>Software Architecture</strong>, <strong>DevOps</strong>, and <strong>Scalable Distributed Systems</strong>.</p>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">4.11 Personal Reflection on the Value of the Internship</h3>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">The industrial internship at Enin Tech Solutions PLC was an invaluable, transformative milestone in the author's academic and professional journey. It bridged the gap between theoretical university lectures and the rigorous demands of the modern technology industry, instilling genuine professional confidence.</p>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">4.12 Challenges Faced During the Practical Engagement</h3>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Initial Codebase Complexity:** Navigating a large, established repository with numerous interdependent modules was initially daunting, requiring dedicated time to trace data flows.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Balancing Feature Delivery with Rigorous Quality:** Meeting strict sprint deadlines while maintaining high code quality, accessible styling, and defensive validation demanded disciplined time management.</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">4.13 Self-Evaluation: Personal Strengths and Areas for Continuous Improvement</h3>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Strengths:** Strong logical debugging skills, rapid learning curve for modern frameworks, disciplined adherence to coding standards, and high attention to user accessibility and data integrity.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Areas for Improvement:** Deepening expertise in automated end-to-end testing frameworks (Cypress/Playwright) and gaining greater familiarity with containerization platforms (Docker, Kubernetes).</li>
+<hr style="border:0; border-top:1px solid #d4d4d8; margin:14pt 0;" />
+<br clear="all" style="page-break-before:always; mso-break-type:section-break" />
+<h1 style="color:#e30613; font-family:Arial, sans-serif; font-size:18pt; font-weight:bold; margin-top:18pt; margin-bottom:8pt; border-bottom:2px solid #e30613; padding-bottom:4pt;">CHAPTER 5: CONCLUSIONS AND RECOMMENDATIONS</h1>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">5.1 Overall Conclusion</h3>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">The industrial internship undertaken at <strong>Enin Tech Solutions PLC</strong> between July 4, 2026, and August 29, 2026, was successfully concluded with the complete design, implementation, and verification of the <strong>WOW Burger Restaurant Management and Digital Ordering Web Application</strong>. </p>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">The developed system provides a full-featured digital solution for the restaurant franchise:</p>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">A responsive, accessible customer interface featuring interactive OpenStreetMap branch discovery, dynamic categorized menu browsing, and a seamless checkout experience.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">An atomic, transactional backend service ensuring that multi-item food orders are committed reliably with 15% Ethiopian VAT calculations.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">A role-based administration portal empowering managers and system administrators with catalog control, account administration, and a live, auto-refreshing order processing pipeline.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">High software quality validated through automated API testing (100% pass rate across 16 routes) and clean production bundling (1,630 modules compiled in 50.93 seconds).</li>
+<p style="font-size:11pt; line-height:1.5; margin-bottom:8pt; text-align:justify;">This practical experience significantly advanced the author's technical, analytical, collaborative, and ethical competencies, fully satisfying the objectives set forth by Haramaya University.</p>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">5.2 Recommendations for the Hosting Organization</h3>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Continuous University Collaboration:** It is strongly recommended that **Haramaya University maintain and expand its partnership with Enin Tech Solutions PLC** for future student internship placements. The company's structured mentorship, advanced tech stack, and professional environment make it an outstanding training ground for emerging software engineers.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Automated Testing Integration:** It is recommended that the company formalize automated unit and integration test pipelines (such as Jest or Vitest) within their CI/CD workflows to accelerate regression testing.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Cloud Storage Adoption:** For media-heavy applications like restaurant menus, transitioning from local static storage to dedicated cloud asset storage (e.g., AWS S3 or Cloudinary) will streamline client media updates.</li>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">5.3 Recommendations for Improving the University Internship Program</h3>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Curriculum Alignment with Modern Full-Stack Ecosystems:** The university is encouraged to introduce dedicated laboratory modules covering modern JavaScript application architectures (React, Node.js, Express, TypeScript) and modern build tools (Vite).</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Early Git & Version Control Training:** Incorporating collaborative Git workflows and code review practices in early academic programming courses will better prepare students for industrial teamwork.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">**Dedicated Industrial Preparation Seminars:** Organizing pre-internship workshops focused on industrial debugging tools, technical report writing, and professional workplace communication will enhance student readiness and confidence.</li>
+<hr style="border:0; border-top:1px solid #d4d4d8; margin:14pt 0;" />
+<br clear="all" style="page-break-before:always; mso-break-type:section-break" />
+<h1 style="color:#e30613; font-family:Arial, sans-serif; font-size:18pt; font-weight:bold; margin-top:18pt; margin-bottom:8pt; border-bottom:2px solid #e30613; padding-bottom:4pt;">8. REFERENCES</h1>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Date, C. J. (2019). *An Introduction to Database Systems* (8th ed.). Pearson Education.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Fielding, R. T. (2000). *Architectural Styles and the Design of Network-based Software Architectures* (Doctoral dissertation). University of California, Irvine.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Freeman, A. (2022). *Pro React 18: Building Modern Web Applications*. Apress.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Haramaya University. (2024). *Internship Report Writing Guidelines for Faculty of Computing and Informatics*. Directorate of Academic Programs, Haramaya University.</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">MDN Web Docs. (2026). *JavaScript ES6 Modules, Asynchronous Programming, and Web APIs*. Mozilla Developer Network. https://developer.mozilla.org/</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">MySQL Documentation. (2026). *MySQL 8.0 Reference Manual: InnoDB Storage Engine and Transactions*. Oracle Corporation. https://dev.mysql.com/doc/</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Node.js Foundation. (2026). *Node.js v24 LTS Documentation*. OpenJS Foundation. https://nodejs.org/docs/</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Tailwind Labs. (2026). *Tailwind CSS: Utility-First CSS Framework Documentation*. https://tailwindcss.com/docs</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">Vite Documentation. (2026). *Vite: Next Generation Frontend Tooling*. https://vitejs.dev/guide/</li>
+<li style="margin-left:20pt; margin-bottom:3pt; font-size:11pt;">World Wide Web Consortium (W3C). (2018). *Web Content Accessibility Guidelines (WCAG) 2.1*. W3C Recommendation. https://www.w3.org/TR/WCAG21/</li>
+<hr style="border:0; border-top:1px solid #d4d4d8; margin:14pt 0;" />
+<br clear="all" style="page-break-before:always; mso-break-type:section-break" />
+<h1 style="color:#e30613; font-family:Arial, sans-serif; font-size:18pt; font-weight:bold; margin-top:18pt; margin-bottom:8pt; border-bottom:2px solid #e30613; padding-bottom:4pt;">9. APPENDICES</h1>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">Appendix A: Complete MySQL Database DDL Scripts</h3>
+<pre style="background:#f4f4f5; border:1px solid #e4e4e7; padding:10px; font-family:'Courier New', Courier, monospace; font-size:10pt; line-height:1.2; margin-bottom:12pt; white-space:pre-wrap;">-- 1. Branches Table
+CREATE TABLE branches (
+  id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(100) NOT NULL,
+  address VARCHAR(255) DEFAULT NULL,
+  phone VARCHAR(30) DEFAULT NULL,
+  is_active TINYINT(1) NOT NULL DEFAULT '1',
+  created_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 2. Categories Table
+CREATE TABLE categories (
+  id INT NOT NULL AUTO_INCREMENT,
+  branch_id INT NOT NULL,
+  name VARCHAR(100) NOT NULL,
+  description TEXT DEFAULT NULL,
+  created_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  UNIQUE KEY unique_category_per_branch (branch_id, name),
+  CONSTRAINT categories_ibfk_1 FOREIGN KEY (branch_id) REFERENCES branches (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 3. Products Table
+CREATE TABLE products (
+  id INT NOT NULL AUTO_INCREMENT,
+  branch_id INT NOT NULL,
+  category_id INT DEFAULT NULL,
+  name VARCHAR(150) NOT NULL,
+  description TEXT DEFAULT NULL,
+  price DECIMAL(10,2) NOT NULL,
+  image VARCHAR(255) DEFAULT NULL,
+  is_available TINYINT(1) NOT NULL DEFAULT '1',
+  created_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  KEY branch_id (branch_id),
+  KEY category_id (category_id),
+  CONSTRAINT products_ibfk_1 FOREIGN KEY (branch_id) REFERENCES branches (id),
+  CONSTRAINT products_ibfk_2 FOREIGN KEY (category_id) REFERENCES categories (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 4. Users Table
+CREATE TABLE users (
+  id INT NOT NULL AUTO_INCREMENT,
+  branch_id INT DEFAULT NULL,
+  full_name VARCHAR(150) NOT NULL,
+  email VARCHAR(150) NOT NULL,
+  password_hash VARCHAR(255) NOT NULL,
+  role ENUM('super_admin','manager','staff') NOT NULL DEFAULT 'staff',
+  is_active TINYINT(1) NOT NULL DEFAULT '1',
+  created_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  UNIQUE KEY email (email),
+  KEY branch_id (branch_id),
+  CONSTRAINT users_ibfk_1 FOREIGN KEY (branch_id) REFERENCES branches (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 5. Orders Table
+CREATE TABLE orders (
+  id INT NOT NULL AUTO_INCREMENT,
+  branch_id INT NOT NULL,
+  customer_name VARCHAR(150) DEFAULT NULL,
+  customer_phone VARCHAR(30) DEFAULT NULL,
+  order_type ENUM('dine_in','takeaway','delivery') NOT NULL DEFAULT 'takeaway',
+  table_number VARCHAR(20) DEFAULT NULL,
+  subtotal DECIMAL(10,2) NOT NULL DEFAULT '0.00',
+  vat_amount DECIMAL(10,2) NOT NULL DEFAULT '0.00',
+  total DECIMAL(10,2) NOT NULL DEFAULT '0.00',
+  status ENUM('pending','confirmed','preparing','ready','completed','cancelled') NOT NULL DEFAULT 'pending',
+  created_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  KEY branch_id (branch_id),
+  CONSTRAINT orders_ibfk_1 FOREIGN KEY (branch_id) REFERENCES branches (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- 6. Order Items Table
+CREATE TABLE order_items (
+  id INT NOT NULL AUTO_INCREMENT,
+  order_id INT NOT NULL,
+  product_id INT NOT NULL,
+  quantity INT NOT NULL DEFAULT '1',
+  unit_price DECIMAL(10,2) NOT NULL,
+  line_total DECIMAL(10,2) NOT NULL,
+  PRIMARY KEY (id),
+  KEY order_id (order_id),
+  KEY product_id (product_id),
+  CONSTRAINT order_items_ibfk_1 FOREIGN KEY (order_id) REFERENCES orders (id),
+  CONSTRAINT order_items_ibfk_2 FOREIGN KEY (product_id) REFERENCES products (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;</pre>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">Appendix B: API Route Specifications & Status Codes</h3>
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse; width:100%; margin-bottom:14pt; border-color:#d4d4d8; font-size:10pt;"><tr style="background:#f4f4f5; font-weight:bold;"><th style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Route Path</th><th style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Method</th><th style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Auth Guard</th><th style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Request Payload</th><th style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Response Success Code</th></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/health`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">GET</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">None</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">None</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">200 OK</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/auth/login`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">POST</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">None</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`email`, `password`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">200 OK</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/auth/me`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">GET</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Bearer JWT</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">None</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">200 OK</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/branches`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">GET</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">None</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Query: `branchId` (optional)</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">200 OK</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/branches`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">POST</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Superadmin</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`name`, `address`, `phone`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">201 Created</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/categories`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">GET</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">None</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Query: `branchId` (optional)</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">200 OK</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/categories`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">POST</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Admin/Super</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`name`, `branchId`, `description`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">201 Created</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/products`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">GET</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">None</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Query: `branchId`, `categoryId`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">200 OK</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/products`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">POST</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Admin/Super</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`name`, `price`, `branchId`, `categoryId`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">201 Created</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/products/:id/availability`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">PATCH</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Admin/Super</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`isAvailable` (boolean)</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">200 OK</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/orders`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">POST</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">None</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`branchId`, `customerName`, `items`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">201 Created</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/orders`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">GET</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">None/Staff</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Query: `branchId` (optional)</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">200 OK</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/orders/:id/status`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">PATCH</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Staff/Admin</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`status` (`preparing`, `ready`, etc.)</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">200 OK</td></tr><tr style="background:#fafafa;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/users`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">GET</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Superadmin</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">None</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">200 OK</td></tr><tr style="background:#ffffff;"><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`/api/users`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">POST</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">Superadmin</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">`name`, `email`, `password`, `role`</td><td style="border:1px solid #d4d4d8; padding:6px 10px; text-align:left;">201 Created</td></tr></table>
+<h3 style="color:#27272a; font-family:Arial, sans-serif; font-size:12pt; font-weight:bold; margin-top:12pt; margin-bottom:4pt;">Appendix C: Verified System Directory Structure</h3>
+<pre style="background:#f4f4f5; border:1px solid #e4e4e7; padding:10px; font-family:'Courier New', Courier, monospace; font-size:10pt; line-height:1.2; margin-bottom:12pt; white-space:pre-wrap;">WOW Burger/
+├── backend/
+│   ├── config/db.js                  # MySQL connection pool
+│   ├── controllers/                  # Auth, branch, category, product, order, user controllers
+│   ├── middleware/authMiddleware.js  # JWT authentication and RBAC checks
+│   ├── routes/                       # Express modular REST routes
+│   ├── server.js                     # Server entry point on port 5000
+│   └── package.json                  # Backend dependencies
+├── frontend/
+│   ├── public/images/                # 45+ categorized product photos
+│   ├── src/
+│   │   ├── components/               # UI components, layout, menu, map
+│   │   ├── context/                  # AuthContext, CartContext, ThemeContext
+│   │   ├── pages/                    # Home, Menu, Checkout, Login, Admin views
+│   │   ├── services/                 # API client & endpoint service functions
+│   │   ├── styles/index.css          # Tailwind and custom theme variables
+│   │   ├── App.jsx                   # React Router root component
+│   │   └── main.jsx                  # React DOM mount point
+│   ├── package.json                  # Frontend dependencies
+│   ├── tailwind.config.js            # Tailwind styling tokens
+│   └── vite.config.js                # Vite development and build settings
+└── docs/
+    ├── WOW_Burger_Technical_Documentation.md  # System Architecture & Technical Report
+    ├── WOW_Burger_Internship_Report.md        # Academic Internship Report (Markdown)
+    └── WOW_Burger_Internship_Report.doc       # Academic Internship Report (Microsoft Word Document)</pre>
+</body>
+</html>
